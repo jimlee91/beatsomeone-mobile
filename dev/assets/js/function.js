@@ -23,18 +23,6 @@ function setAudioInstance(item) {
       .querySelector("#playList__item" + item.id)
       .classList.add("playing");
   });
-  audio.on("audioprocess", function(e) {
-    // 파일이 재생될때 계속 실행
-    document.querySelector(
-      "#playList__item" + item.id + " .current"
-    ).innerHTML = time_convert(parseInt(e, 10)) + " / ";
-  });
-  audio.on("ready", function(e) {
-    // 파일이 로드가 다 됐을때,
-    document.querySelector(
-      "#playList__item" + item.id + " .duration"
-    ).innerHTML = time_convert(parseInt(audio.getDuration(), 10));
-  });
   audio.on("pause", function(e) {
     var actionTarget = "playAction" + item.id;
     document
@@ -111,7 +99,7 @@ $(function() {
     });
   }
   // 메인 trend Slider
-  $(".trending__slider .slider").slick({
+  var slideOption = {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -120,6 +108,17 @@ $(function() {
     centerPadding: "25px",
     arrows: false,
     dots: true
+  };
+  $(".trending__slider .slider").slick(slideOption);
+  $(".topFive .topFice__slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    centerPadding: "25px",
+    arrows: false,
+    dots: false
   });
   // 메인페이지: 서브 앨범 슬라이드 이벤트
   $(".toggle-subList").on("click", function() {

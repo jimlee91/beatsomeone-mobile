@@ -1,11 +1,17 @@
 .sublist {
-  padding-top: 30px;
-  .wrap {
-    @include flex($align: flex-start);
-  }
+  padding-top: 10px;
 
+  .showFilter {
+    width: 50px;
+    height: 50px;
+    @include position($position: fixed, $right: 15px, $bottom: 15px);
+    z-index: 10;
+    background: url("../images/icon/i-filter.png") #ffda2a no-repeat center;
+    background-size: auto 20px;
+    border-radius: 50%;
+  }
   .row {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -27,7 +33,6 @@
     flex: 1;
 
     .topFive {
-      @include flex($justify: space-between);
       .albumItem {
         padding: 0;
       }

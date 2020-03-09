@@ -7,6 +7,9 @@
 .tab {
   width: 100%;
   overflow: auto;
+  .tab__scroll-none {
+    @include flex($justify: space-between);
+  }
   .tab__scroll {
     @include flex();
     flex-wrap: nowrap;

@@ -6,6 +6,7 @@
     <meta property="og:url" content="유알엘" />
     <meta property="og:description" content="디스크립션" />
     <meta property="og:title" content="타이틀" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,900,900i&display=swap"
       rel="stylesheet"
@@ -15,6 +16,7 @@
       rel="stylesheet"
       href="./assets/plugins/rangeSlider/css/ion.rangeSlider.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.14/mediaelementplayer.min.css">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>beatsomeone</title>
   </head>
@@ -26,7 +28,9 @@
           <div class="wrap">
             <div class="detail__music">
               <div class="detail__music-img">
-                <img src="https://via.placeholder.com/190x190" alt="" />
+                <button class="btn-play ">
+                  <img src="https://via.placeholder.com/110x110" alt="" />
+                </button>
               </div>
               <div class="detail__music-info">
                 <h2 class="title">Shooting Stars</h2>
@@ -35,35 +39,19 @@
                   <span class="play">547</span>
                   <span class="song">120</span>
                   <span class="registed">May 20</span>
-                  <span class="etc"
-                    >Free Downloads: Tagged || Non -Exclusive/Stems/Exclusive:
-                    Untagged</span
-                  >
                 </div>
                 <div class="utils">
                   <div class="utils__info">
                     <a href="" class="buy"><span>$20.00</span></a>
-                    <span class="cart">700</span>
-                    <span class="talk">412</span>
-                    <span class="share">179</span>
-                    <span class="atob">91</span>
-                  </div>
-                  <div class="category">
-                    <span>Acoustic Folk</span>
-                    <span>Jazz</span>
-                    <span>Ambient</span>
-                    <span>Folk</span>
-                    <span>Singer-Songwriter</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="detail__player">
-              <button class="detail__player-controller"></button>
-              <div id="detail__player-wave">
-                <!-- wave 들어가는 부분-->
-              </div>
+
+            <div class="wave">
+              
             </div>
+           
             <div class="detail__comment">
               <form action="">
                 <div class="comment">
@@ -82,8 +70,8 @@
           </div>
         </div>
         <div class="detail__body">
-          <div class="wrap">
-            <div class="tab">
+          <div class="tab">
+            <div class="tab__scroll-none">
               <button class="active">
                 SIMILAR TRACKS
               </button>
@@ -94,7 +82,7 @@
                 INFORMATION
               </button>
             </div>
-
+          </div>
             <div class="detail__content">
               <div class="playList">
                 <ul id="playList__list" class="playList__list">
@@ -111,7 +99,6 @@
     <script src="./assets/plugins/underscore.js"></script>
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="./assets/plugins/slick/slick.js"></script>
-    <script src="./assets/plugins/rangeSlider/js/ion.rangeSlider.js"></script>
     <script src="./assets/js/build.js"></script>
     <!-- playlist item 템플릿 문자열 -->
     <script type="text/template" id="playListTemplate">
@@ -131,6 +118,9 @@
                 <i class="label new">N</i>
                 <% } %>
               </span>
+
+              <button class="btn-play" data-action="playAction<%- item.id %>">재생</button>
+              <div class="wave"></div>
               <figcaption>
                 <h3 class="playList__title">
                   <%- item.title %>
@@ -139,37 +129,9 @@
               </figcaption>
             </figure>
           </div>
-          <div class="col genre">
-            <% item.genres.forEach(function(genre, index){ %>
-            <button class="<%- genre.active && 'active' %>"><%- genre.title %></button>
-            <% }) %>
-          </div>
-          <div class="col playbtn">
-            <button class="btn-play" data-action="playAction<%- item.id %>">재생</button>
-            <span class="timer">
-              <span class="current"></span>
-              <span class="duration">0:00</span>
-            </span>
-          </div>
-          <div class="col spectrum">
-            <div class="wave"></div>
-          </div>
-          <div class="col utils">
-            <a href="" class="cart">
-              장바구니
-              <span class="tooltip">$20.00</span>
-            </a>
-            <a href="" class="download">다운로드</a>
-            <a href="" class="shared">공유하기</a>
-          </div>
           <div class="col more">
             <button>
               more
-              <span class="tooltip">
-                <a href="">action1</a>
-                <a href="">action2</a>
-                <a href="">action3</a>
-              </span>
             </button>
           </div>
         </div>
@@ -384,14 +346,12 @@
       var playbtn = document.querySelector(".detail__player-controller");
       document.addEventListener("DOMContentLoaded", function() {
         var music = WaveSurfer.create({
-          container: document.querySelector("#detail__player-wave"),
+          container: document.querySelector(".wave"),
           waveColor: "#696969",
           progressColor: "#c3ac45",
           hideScrollbar: true,
-          barWidth: 5,
-          barRadius: 2,
-          barGap: 2,
-          height: 200
+          pixelRatio: 1,
+          height: 30
         });
         music.load("./assets/audio/testfile.mp3");
         music.on("play", function(e) {
@@ -404,6 +364,8 @@
           music.playPause();
         });
       });
+
+   
     </script>
   </body>
 </html>

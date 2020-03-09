@@ -18,9 +18,6 @@
   <body>
     <div class="wrapper">
       @@include('include/header.html')
-
-      <!--  -->
-
       <div class="container">
         <div class="main">
           <section class="main__section1">
@@ -259,6 +256,19 @@
         </div>
       </div>
     </div>
+
+    <div class="player">
+      <audio controls="controls">
+        <source src="./assets/audio/testfile.mp3" type="audio/ogg" />
+        <source src="./assets/audio/testfile.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="player__progress"></div>
+      <div class="player__content">
+        <div class="wrap"></div>
+      </div>
+    </div>
+
     <script src="./assets/plugins/jquery.js"></script>
     <script src="./assets/plugins/underscore.js"></script>
     <script src="https://unpkg.com/wavesurfer.js"></script>
@@ -306,6 +316,36 @@
       _.templateSettings.variable = "item";
       var template = _.template($("#playListTemplate").text());
       var playList = [
+        {
+          id: 1,
+          coverImg: "https://via.placeholder.com/55x55",
+          isNew: true,
+          title: "Celebration (Buy 1 Get 3 FR...",
+          singer: "by Diamond Style",
+          genres: [
+            {
+              active: true,
+              title: "All Genre"
+            },
+            {
+              active: true,
+              title: "Jaz"
+            },
+            {
+              active: false,
+              title: "Amb"
+            },
+            {
+              active: false,
+              title: "Fol"
+            },
+            {
+              active: false,
+              title: "Singer-Songwriter"
+            }
+          ],
+          audioFile: "./assets/audio/testfile.mp3"
+        },
         {
           id: 1,
           coverImg: "https://via.placeholder.com/55x55",
