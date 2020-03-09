@@ -1,0 +1,31 @@
+.tab {
+  background: #1c1d23;
+  border: 1px solid #2b2c30;
+}
+
+// main__media
+.tab {
+  width: 100%;
+  overflow: auto;
+  .tab__scroll {
+    @include flex();
+    flex-wrap: nowrap;
+  }
+  button {
+    color: #9fa1a9;
+    height: 40px;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 0.5s;
+    padding: 0 20px;
+    white-space: nowrap;
+    &.active {
+      color: $color-white;
+      border-bottom: 2px solid $color-white;
+    }
+    &:hover {
+      color: $color-white;
+      opacity: 0.85;
+    }
+  }
+}

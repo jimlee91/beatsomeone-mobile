@@ -1,0 +1,39 @@
+.footer {
+  padding: 40px 0;
+  margin-top: 70px;
+  border-top: 1px solid $white-line;
+  .footer__top {
+    @include flex($justify: space-between);
+    flex-direction: column;
+  }
+  .footer__logo img {
+    height: 13px;
+  }
+  .footer__sns {
+    margin-top: 30px;
+    @include flex();
+    a {
+      margin: 0 15px;
+    }
+  }
+}
+
+.footer__bottom {
+  margin-top: 25px;
+  .footer__appLink {
+    @include flex($justify: center);
+    a {
+      margin: 0 7px;
+      img {
+        height: 35px;
+      }
+    }
+  }
+  .footer__copyright {
+    text-align: center;
+    margin-top: 25px;
+    color: $color-white;
+    opacity: 0.3;
+    font-size: 10px;
+  }
+}

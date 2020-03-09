@@ -1,0 +1,151 @@
+.main {
+  overflow: hidden;
+  .tab {
+    margin-bottom: 10px;
+  }
+  .main__section1 {
+    background: url("../images/main-section1-visual.png") no-repeat center top;
+    background-size: 100% auto;
+  }
+  .main__section1-title {
+    padding: 100px 10px 0;
+    margin-bottom: 40px;
+    h1 {
+      @include titleFont($display: 1, $fontWeight: 900);
+    }
+    p {
+      font-size: 12px;
+      line-height: 1.5em;
+      opacity: 0.5;
+      margin-top: 1em;
+      font-weight: 300;
+    }
+  }
+
+  .main__section2 {
+    background: url("../images/main-section2-visual.png") no-repeat center top;
+    background-size: 100% auto;
+    .main__section2-title {
+      padding: 110px 0 140px;
+      text-align: center;
+      h1 {
+        @include titleFont(
+          $display: 1,
+          $letterSpacing: -0.045em,
+          $style: italic
+        );
+        margin-bottom: 20px;
+      }
+      a {
+        @include borderLikeButton($padding: 10px 20px);
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .switch {
+    margin-right: 30px;
+  }
+  .filter {
+    height: 100px;
+    @include flex($justify: center);
+    .custom-select {
+      margin: 0 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .trending {
+    .trending__slider {
+      margin: 0 auto;
+      .slick-dots {
+        @include flex($justify: center);
+        margin-top: 20px;
+        li {
+          margin: 0 3px;
+        }
+        button {
+          width: 8px;
+          border-radius: 50%;
+          height: 8px;
+          background: rgba(255, 255, 255, 0.1);
+          @include textIndet;
+          transition: all 0.3s;
+        }
+        .slick-active button {
+          background: #fff;
+        }
+      }
+    }
+    .trending__title {
+      margin-bottom: 40px;
+      text-align: center;
+      @include titleFont(
+        $display: 2,
+        $letterSpacing: -0.02em,
+        $style: italic,
+        $fontWeight: 300
+      );
+    }
+  }
+
+  .alliance {
+    margin: 30px 0 50px;
+    text-align: center;
+    position: relative;
+  }
+
+  .testimonials {
+    .testimonials__title {
+      text-align: center;
+      margin-bottom: 40px;
+      h1 {
+        @include titleFont(
+          $display: 2,
+          $letterSpacing: -0.02em,
+          $style: italic
+        );
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        color: #fff;
+      }
+    }
+    .testimonials__lists {
+      @include flex($justify: center);
+    }
+    .testimonials__btnbox {
+      @include flex($justify: center);
+      margin-top: 30px;
+      a {
+        @include borderLikeButton($padding: 10px 20px);
+        font-size: 12px;
+        color: #fff;
+        margin: 0 5px;
+        &.beats {
+          border-color: #ffda2a;
+          color: #ffda2a;
+        }
+      }
+    }
+  }
+
+  .main__desc {
+    text-align: center;
+    margin-top: 100px;
+    h1 {
+      @include titleFont($display: 3, $style: italic, $letterSpacing: -0.045em);
+    }
+    a {
+      @include borderLikeButton($padding: 10px 20px);
+      color: #fff;
+      font-size: 12px;
+      margin-top: 25px;
+    }
+  }
+}
