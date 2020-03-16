@@ -1,0 +1,41 @@
+.information {
+  padding: 20px;
+
+  .information__thumb {
+    margin:0 auto;
+    width: 100px;
+    height: 100px;
+    flex: none;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .information__user {
+    flex: 1;
+  }
+  .information__username {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.25em;
+  }
+  .information__description {
+    margin-top: 15px;
+    white-space: pre-line;
+    font-size: 12px;
+    line-height: 18px;
+    opacity: .3;
+  }
+  .information__message {
+    display: block;
+    margin:0 auto;
+    width: 110px;
+    line-height: 40px;
+    border-radius: 3px;
+    background:#1c66ba;
+    color:#fff;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
