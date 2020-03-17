@@ -79,6 +79,16 @@ $(function() {
       .slideToggle();
   });
 
+  $('.showFilter').on('click', function(){
+    $(this).toggleClass('js-active');
+    $('.sublist__filter').toggleClass('js-active');
+    if( $('.sublist__filter').hasClass('js-active') ) {
+      $('body').css('overflow', 'hidden')
+    } else {
+      $('body').css('overflow', 'auto')
+    }
+  })
+
   // BPM range
   if ($(".bpmRange").length) {
     $(".bpmRange input").ionRangeSlider({

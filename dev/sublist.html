@@ -24,8 +24,362 @@
       @@include('./include/header.html')
       <div class="container sub">
         <div class="sublist">
-          <button class="showFilter"></button>
 
+          <!-- 필터 -->
+          <div class="sublist__filter">
+            <div class="sublist__filter-content">
+              <div class="row">
+                <div class="filter">
+                  <h2 class="filter__title">FILTER</h2>
+                  <div class="filter__content">
+                    <ul class="filter__list">
+                      <li class="filter__item">
+                        <label for="fillter1" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter1"
+                          />
+                          <span></span> All Genre
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter2" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter2"
+                          />
+                          <span></span> Hip Hop
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter3" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter3"
+                          />
+                          <span></span> Pop
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter4" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter4"
+                          />
+                          <span></span> R&B
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter5" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter5"
+                          />
+                          <span></span> Rock
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter6" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter6"
+                          />
+                          <span></span> Electronic
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter7" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter7"
+                          />
+                          <span></span> Reggae
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter8" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter8"
+                          />
+                          <span></span> Reggae
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter9" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="filter"
+                                  hidden
+                                  id="fillter9"
+                          />
+                          <span></span> World
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="filter">
+                  <h2 class="filter__title">Subgenres</h2>
+                  <div class="filter__content">
+                    <ul class="filter__list">
+                      <li class="filter__item">
+                        <label for="fillter10" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="subgenres"
+                                  hidden
+                                  id="fillter10"
+                          />
+                          <span></span> All
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter11" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="subgenres"
+                                  hidden
+                                  id="fillter11"
+                          />
+                          <span></span> Rock
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter12" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="subgenres"
+                                  hidden
+                                  id="fillter12"
+                          />
+                          <span></span> Hip Hop
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter13" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="subgenres"
+                                  hidden
+                                  id="fillter13"
+                          />
+                          <span></span> Electronic
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter14" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="subgenres"
+                                  hidden
+                                  id="fillter14"
+                          />
+                          <span></span> R&B
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter15" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="subgenres"
+                                  hidden
+                                  id="fillter15"
+                          />
+                          <span></span> Country
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter16" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="subgenres"
+                                  hidden
+                                  id="fillter16"
+                          />
+                          <span></span> K-pop
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="filter">
+                  <h2 class="filter__title">BPM</h2>
+                  <div class="filter__content">
+                    <div class="bpmRange">
+                      <input type="text" />
+                    </div>
+                    <div class="bpmRangeInfo">
+                      <input type="text" readonly id="bpm-start" />
+                      <span> - </span>
+                      <input type="text" readonly id="bpm-end" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="filter">
+                  <h2 class="filter__title folded">Moods</h2>
+                  <div class="filter__content" style="display: none;">
+                    <ul class="filter__list">
+                      <li class="filter__item">
+                        <label for="fillter21" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="moods"
+                                  hidden
+                                  id="fillter21"
+                          />
+                          <span></span> All
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter22" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="moods"
+                                  hidden
+                                  id="fillter22"
+                          />
+                          <span></span> Accomplished
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter23" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="moods"
+                                  hidden
+                                  id="fillter23"
+                          />
+                          <span></span> Adored
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter24" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="moods"
+                                  hidden
+                                  id="fillter24"
+                          />
+                          <span></span> Angry
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="fillter25" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="moods"
+                                  hidden
+                                  id="fillter25"
+                          />
+                          <span></span> Annoyed
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="filter">
+                  <h2 class="filter__title folded">Track Type</h2>
+                  <div class="filter__content" style="display: none;">
+                    <ul class="filter__list">
+                      <li class="filter__item">
+                        <label for="trackTypes1" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="trackTypes"
+                                  hidden
+                                  id="trackTypes1"
+                          />
+                          <span></span> All types
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="trackTypes2" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="trackTypes"
+                                  hidden
+                                  id="trackTypes2"
+                          />
+                          <span></span> Beats
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="trackTypes3" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="trackTypes"
+                                  hidden
+                                  id="trackTypes3"
+                          />
+                          <span></span> Beats with chorus
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="trackTypes4" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="trackTypes"
+                                  hidden
+                                  id="trackTypes4"
+                          />
+                          <span></span> Vocals
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="trackTypes5" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="trackTypes"
+                                  hidden
+                                  id="trackTypes5"
+                          />
+                          <span></span> Song reference
+                        </label>
+                      </li>
+                      <li class="filter__item">
+                        <label for="trackTypes6" class="checkbox">
+                          <input
+                                  type="radio"
+                                  name="trackTypes"
+                                  hidden
+                                  id="trackTypes6"
+                          />
+                          <span></span> Songs
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="showFilter"></button>
+          <!-- 필터 끝 -->
           <div class="sublist__content">
             <div class="row">
               <h2 class="section-title">

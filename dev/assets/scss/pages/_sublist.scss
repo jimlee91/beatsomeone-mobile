@@ -9,6 +9,10 @@
     background: url("../images/icon/i-filter.png") #ffda2a no-repeat center;
     background-size: auto 20px;
     border-radius: 50%;
+    &.js-active {
+      background: url("../images/icon/filter-close.png") #ffda2a no-repeat center;
+      background-size: auto 18px;
+    }
   }
   .row {
     margin-bottom: 40px;
@@ -17,18 +21,7 @@
     }
   }
 
-  .sublist__filter {
-    width: 250px;
-    margin-right: 60px;
-    flex: none;
 
-    .row {
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
   .sublist__content {
     flex: 1;
 
