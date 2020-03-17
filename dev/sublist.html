@@ -463,8 +463,8 @@
             <figure>
               <span class="playList__cover">
                 <img
-                  src="<%- item.coverImg %>"
-                  alt=""
+                        src="<%- item.cover_art_url %>"
+                        alt=""
                 />
                 <% if ( item.isNew === true ) { %>
                 <i class="label new">N</i>
@@ -475,9 +475,9 @@
               <div class="wave"></div>
               <figcaption>
                 <h3 class="playList__title">
-                  <%- item.title %>
+                  <%- item.album %>
                 </h3>
-                <span class="playList__by"><%- item.singer %></span>
+                <span class="playList__by"><%- item.artist %></span>
               </figcaption>
             </figure>
           </div>
@@ -489,16 +489,19 @@
         </div>
       </li>
     </script>
+
     <script>
       _.templateSettings.variable = "item";
       var template = _.template($("#playListTemplate").text());
       var playList = [
         {
           id: 1,
-          coverImg: "https://via.placeholder.com/55x55",
+          name: "I Came Running",
+          artist: "Ancient Astronauts",
+          album: "We Are to Answer",
+          url: "./assets/audio/testfile.mp3",
+          cover_art_url: "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-to-answer.jpg",
           isNew: true,
-          title: "Celebration (Buy 1 Get 3 FR...",
-          singer: "by Diamond Style",
           genres: [
             {
               active: true,
@@ -521,52 +524,25 @@
               title: "Singer-Songwriter"
             }
           ],
-          audioFile: "./assets/audio/testfile.mp3"
+          subPlayList: [
+
+          ]
         },
         {
           id: 2,
-          coverImg: "https://via.placeholder.com/55x55",
+          name: "First Snow",
+          artist: "Emancipator",
+          album: "Soon It Will Be Cold Enough",
+          url: "https://521dimensions.com/song/FirstSnow-Emancipator.mp3",
+          cover_art_url: "https://521dimensions.com/img/open-source/amplitudejs/album-art/soon-it-will-be-cold-enough.jpg",
           isNew: true,
-          title: "EMOTIONS",
-          singer: "by Mvrio",
           genres: [
             {
               active: true,
-              title: "Acoustic Folk"
+              title: "All Genre"
             },
             {
               active: true,
-              title: "Electronic"
-            },
-            {
-              active: false,
-              title: "Amb"
-            },
-            {
-              active: false,
-              title: "Fol"
-            },
-            {
-              active: false,
-              title: "Singer-Songwriter"
-            }
-          ],
-          audioFile: "./assets/audio/testfile.mp3",
-          subPlayList: []
-        },
-        {
-          id: 3,
-          coverImg: "https://via.placeholder.com/55x55",
-          isNew: true,
-          title: "Aishiteru (Dean Lo-Fi Inst...",
-          singer: "by Roko Tensei",
-          genres: [
-            {
-              active: true,
-              title: "Hip Hop"
-            },
-            {
-              active: false,
               title: "Jaz"
             },
             {
@@ -579,116 +555,15 @@
             },
             {
               active: false,
-              title: "World"
-            }
-          ],
-          audioFile: "./assets/audio/testfile.mp3",
-          subPlayList: []
-        },
-        {
-          id: 4,
-          coverImg: "https://via.placeholder.com/55x55",
-          isNew: true,
-          title: "Sad Acoustic Guitar",
-          singer: "Ryini Beats",
-          genres: [
-            {
-              active: true,
-              title: "Acoustic Folk"
-            },
-            {
-              active: false,
-              title: "Jaz"
-            },
-            {
-              active: false,
-              title: "Free Beats"
-            }
-          ],
-          audioFile: "./assets/audio/testfile.mp3",
-          subPlayList: []
-        },
-        {
-          id: 8,
-          coverImg: "https://via.placeholder.com/55x55",
-          isNew: true,
-          title: "Sky Red",
-          singer: "by Ant Chamberlain",
-          genres: [
-            {
-              active: true,
-              title: "K-Pop"
-            },
-            {
-              active: true,
-              title: "Country"
-            },
-            {
-              active: false,
-              title: "Amb"
-            },
-            {
-              active: false,
-              title: "K-Pop"
-            },
-            {
-              active: false,
               title: "Singer-Songwriter"
             }
           ],
-          audioFile: "./assets/audio/testfile.mp3"
-        },
-        {
-          id: 13,
-          coverImg: "https://via.placeholder.com/55x55",
-          isNew: true,
-          title: "Malibu",
-          singer: "by Mvrio",
-          genres: [
-            {
-              active: false,
-              title: "Fol"
-            },
-            {
-              active: false,
-              title: "Singer-Songwriter"
-            }
-          ],
-          audioFile: "./assets/audio/testfile.mp3"
-        },
-        {
-          id: 24,
-          coverImg: "https://via.placeholder.com/55x55",
-          isNew: true,
-          title: "Sky Red_breathe-no bac...",
-          singer: "by Ant Chamberlain",
-          genres: [
-            {
-              active: true,
-              title: "Reggae"
-            },
-            {
-              active: true,
-              title: "R&B"
-            },
-            {
-              active: false,
-              title: "Amb"
-            },
-            {
-              active: false,
-              title: "Fol"
-            },
-            {
-              active: false,
-              title: "Singer-Songwriter"
-            }
-          ],
-          audioFile: "./assets/audio/testfile.mp3"
-        }
-      ];
+          subPlayList: [
 
-      renderPlaylistNoDepth(playList);
+          ]
+        },
+      ];
+      renderPlaylist(playList);
     </script>
   </body>
 </html>

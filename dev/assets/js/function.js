@@ -16,7 +16,7 @@ function setAudioInstance(item) {
     hideScrollbar: true,
     height: 90
   });
-  audio.load(item.audioFile);
+  audio.load(item.url);
   audio.on("play", function(e) {
     console.log(audio.getCurrentTime());
     document
@@ -71,6 +71,10 @@ function renderPlaylistNoDepth(arr) {
 }
 
 $(function() {
+  $('.player__util-toggle-btn').on('click', function(){
+    $(this).toggleClass('js-active');
+    $('.player__util').toggleClass('js-active');
+  });
   $(".filter__title").on("click", function() {
     $(this).toggleClass("folded");
     $(this)
