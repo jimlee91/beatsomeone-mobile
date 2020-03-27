@@ -10,7 +10,8 @@
     background-size: auto 20px;
     border-radius: 50%;
     &.js-active {
-      background: url("../images/icon/filter-close.png") #ffda2a no-repeat center;
+      background: url("../images/icon/filter-close.png") #ffda2a no-repeat
+        center;
       background-size: auto 18px;
     }
   }
@@ -21,13 +22,17 @@
     }
   }
 
-
   .sublist__content {
     flex: 1;
 
     .topFive {
+      overflow: auto;
+      padding-bottom: 5px;
+      .topFice__slider {
+        display: flex;
+      }
       .albumItem {
-        padding: 0;
+        padding: 0 10px;
       }
     }
   }

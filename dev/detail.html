@@ -27,9 +27,9 @@
         <div class="detail__header">
           <div class="wrap">
             <div class="detail__music">
-              <div class="detail__music-img">
-                <button class="btn-play ">
-                  <img src="https://via.placeholder.com/110x110" alt="" />
+              <div class="detail__music-img" id="central-controls" >
+                <button class="btn-play amplitude-play-pause amplitude-paused"  id="play-pause">
+                  <img data-amplitude-song-info="cover_art_url" class="album-art"/>
                 </button>
               </div>
               <div class="detail__music-info">
@@ -48,9 +48,20 @@
               </div>
             </div>
 
-            <div class="wave">
-              
+           
+    <div class="player player--static">
+      <div class="wrap">
+        <div class="player__top">
+          <div class="player__progress">
+            <div id="progress-container">
+              <input type="range" class="amplitude-song-slider" step=".1"/>
+              <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+              <progress id="song-buffered-progress" class="amplitude-buffered-progress"></progress>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
            
             <div class="detail__comment">
               <form action="">
@@ -99,6 +110,7 @@
     <script src="./assets/plugins/underscore.js"></script>
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="./assets/plugins/slick/slick.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.3/dist/amplitude.js"></script>
     <script src="./assets/js/build.js"></script>
     <!-- playlist item 템플릿 문자열 -->
     <script type="text/template" id="playListTemplate">
@@ -218,28 +230,15 @@
           e.target.value.length + "/200";
       });
       var playbtn = document.querySelector(".detail__player-controller");
-      document.addEventListener("DOMContentLoaded", function() {
-        var music = WaveSurfer.create({
-          container: document.querySelector(".wave"),
-          waveColor: "#696969",
-          progressColor: "#c3ac45",
-          hideScrollbar: true,
-          pixelRatio: 1,
-          height: 30
-        });
-        music.load("./assets/audio/testfile.mp3");
-        music.on("play", function(e) {
-          playbtn.classList.add("playing");
-        });
-        music.on("pause", function(e) {
-          playbtn.classList.remove("playing");
-        });
-        playbtn.addEventListener("click", function() {
-          music.playPause();
-        });
-      });
-
    
+    </script>
+     <script>
+      Amplitude.init({
+        "songs": playList,
+        waveforms: {
+          sample_rate: 3000
+        }
+      });
     </script>
   </body>
 </html>

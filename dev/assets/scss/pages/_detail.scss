@@ -115,6 +115,7 @@
     }
     .detail__music-img {
       overflow: hidden;
+      background;#000;
       margin-right: 15px;
       flex: none;
       width: 110px;
@@ -128,9 +129,20 @@
           @include position($left: 50%, $top: 50%);
           z-index: 20;
           transform: translate(-50%, -50%);
-          background: url("../images/icon/play-yellow.png") no-repeat center;
-          background-size: 100% 100%;
         }
+        &.amplitude-paused {
+          &:after {
+            background: url("../images/icon/play-yellow.png") no-repeat center;
+            background-size: 100% 100%;
+          }
+        }
+        &.amplitude-playing {
+          &:after {
+            background: url("../images/icon/stop-yellow.png") no-repeat center;
+            background-size: 100% 100%;
+          }
+        }
+
         &.playing {
           &:after {
             background: url("../images/icon/stop-yellow.png") no-repeat center;
@@ -140,6 +152,7 @@
       }
       img {
         vertical-align: top;
+        opacity: 0.5;
       }
     }
   }

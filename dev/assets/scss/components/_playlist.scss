@@ -32,12 +32,12 @@
       flex: none;
       text-align: center;
       button {
-        width: 15px;
-        height: 15px;
+        width: 17px;
+        height: 17px;
         cursor: pointer;
         @include textIndet;
         background: url("../images/icon/favorite.png") no-repeat center;
-        background-size: 15px 15px;
+        background-size: 17px 17px;
       }
     }
     .name {
@@ -96,6 +96,44 @@
       text-align: center;
       padding: 0 20px;
       flex: none;
+      position: relative;
+      .tooltip {
+        bottom: 15px;
+        width: 100px;
+        background: #2b2c30;
+        left: auto;
+        right: 10px;
+        transform: none;
+        visibility: hidden;
+        a {
+          display: block;
+          height: 0;
+          line-height: 40px;
+          overflow: hidden;
+          color: #9ea1a8;
+          transition: all 0.5s;
+          border-bottom: 1px solid #1b1a1f;
+          &:last-child {
+            border-bottom: 0;
+          }
+          &:hover {
+            color: $color-white;
+            background: #1c1d22;
+          }
+        }
+        &:after {
+          content: "";
+          display: block;
+          @include position($bottom: -10px, $right: 10px);
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-top: 5px solid #2b2c30;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+        }
+      }
       button {
         cursor: pointer;
         @include textIndet;
@@ -104,42 +142,11 @@
         background: url("../images/icon/more.png") no-repeat center;
         position: relative;
         overflow: initial;
-        .tooltip {
-          bottom: 15px;
-          width: 130px;
-          background: #2b2c30;
-          a {
-            display: block;
-            height: 0;
-            line-height: 40px;
-            overflow: hidden;
-            color: #9ea1a8;
-            transition: all 0.5s;
-            border-bottom: 1px solid #1b1a1f;
-            &:last-child {
-              border-bottom: 0;
-            }
-            &:hover {
-              color: $color-white;
-              background: #1c1d22;
-            }
-          }
-          &:after {
-            content: "";
-            display: block;
-            @include position($bottom: -10px, $left: 50%);
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-top: 5px solid #2b2c30;
-            border-bottom: 5px solid transparent;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-          }
-        }
-        &:hover .tooltip {
+
+        &.js-active + .tooltip {
           opacity: 1;
           bottom: 30px;
+          visibility: initial;
           a {
             height: 40px;
           }

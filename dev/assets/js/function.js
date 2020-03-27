@@ -71,9 +71,17 @@ function renderPlaylistNoDepth(arr) {
 }
 
 $(function() {
-  $('.player__util-toggle-btn').on('click', function(){
-    $(this).toggleClass('js-active');
-    $('.player__util').toggleClass('js-active');
+  $(".playList .playList__item .more button").on("click", function() {
+    if ($(this).hasClass("js-active")) {
+      $(this).removeClass("js-active");
+    } else {
+      $(".playList .playList__item .more button").removeClass("js-active");
+      $(this).addClass("js-active");
+    }
+  });
+  $(".player__util-toggle-btn").on("click", function() {
+    $(this).toggleClass("js-active");
+    $(".player__util").toggleClass("js-active");
   });
   $(".filter__title").on("click", function() {
     $(this).toggleClass("folded");
@@ -83,15 +91,15 @@ $(function() {
       .slideToggle();
   });
 
-  $('.showFilter').on('click', function(){
-    $(this).toggleClass('js-active');
-    $('.sublist__filter').toggleClass('js-active');
-    if( $('.sublist__filter').hasClass('js-active') ) {
-      $('body').css('overflow', 'hidden')
+  $(".showFilter").on("click", function() {
+    $(this).toggleClass("js-active");
+    $(".sublist__filter").toggleClass("js-active");
+    if ($(".sublist__filter").hasClass("js-active")) {
+      $("body").css("overflow", "hidden");
     } else {
-      $('body').css('overflow', 'auto')
+      $("body").css("overflow", "auto");
     }
-  })
+  });
 
   // BPM range
   if ($(".bpmRange").length) {
@@ -124,16 +132,16 @@ $(function() {
     dots: true
   };
   $(".trending__slider .slider").slick(slideOption);
-  $(".topFive .topFice__slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    centerMode: true,
-    centerPadding: "25px",
-    arrows: false,
-    dots: false
-  });
+  // $(".topFive .topFice__slider").slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   centerMode: true,
+  //   centerPadding: "25px",
+  //   arrows: false,
+  //   dots: false
+  // });
   // 메인페이지: 서브 앨범 슬라이드 이벤트
   $(".toggle-subList").on("click", function() {
     var itemLength = $(this)
@@ -172,14 +180,16 @@ $(function() {
       .toggle();
   });
 
-  $('.header__nav').on('click', function(e) {
+  $(".header__nav").on("click", function(e) {
     e.preventDefault();
-    $('.gnb').show();
-  })
-  $('.gnb__bg').add('.gnb__close').on('click', function(e) {
-    e.preventDefault();
-    $('.gnb').hide();
-  })
+    $(".gnb").show();
+  });
+  $(".gnb__bg")
+    .add(".gnb__close")
+    .on("click", function(e) {
+      e.preventDefault();
+      $(".gnb").hide();
+    });
 });
 // 윈도우 스크롤 했을때,
 $(window).scroll(function() {
