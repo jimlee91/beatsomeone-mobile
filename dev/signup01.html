@@ -60,55 +60,42 @@
           </form>
         </div>
 
-        <div class="accounts__plan-case">
+        <div class="tab accounts__tab">
+          <button class="active" data-target="plan-free">
+            FREE
+          </button>
+          <button data-target="plan-marketplace">
+            MARKETPLACE
+          </button>
+          <button data-target="plan-pro">
+            PRO PAGE
+          </button>
+        </div>
+
+        <div class="accounts__plan-case" id="plan-free" style="display: ;">
+          <div class="accounts__plan-header">
+            <div class="left">
+              <p>
+                FREE
+              </p>
+              <h2><span>$</span> 0.00<em>/mo</em></h2>
+            </div>
+            <div class="right">
+              <a href="" class="btn btn--start">Get Started</a>
+            </div>
+          </div>
           <table>
             <colgroup>
-              <col width="300" />
-              <col width="200" />
-              <col width="200" />
-              <col width="200" />
+              <col width="" />
+              <col width="120" />
             </colgroup>
-            <thead>
-              <tr>
-                <th></th>
-                <th>
-                  <p>
-                    <br />
-                    FREE
-                  </p>
-                  <h2><span>$</span>0.00</h2>
-                  <a href="" class="btn btn--start">Get Started</a>
-                </th>
-                <th>
-                  <p>
-                    MARKETPLACE<br />
-                    PLAN
-                  </p>
-                  <h2><span>$</span>0.00<em>/mo</em></h2>
-                  <a href="" class="btn btn--start">Get Started</a>
-                </th>
-                <th>
-                  <p>PRO PAGE PLAN<br /><span>(Unlimited)</span></p>
-                  <h2><span>$</span>0.00<em>/mo</em></h2>
-                  <a href="" class="btn btn--start">Get Started</a>
-                </th>
-              </tr>
-            </thead>
             <tbody>
               <tr>
                 <td>Upload Tracks Limit</td>
                 <td>10</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
               </tr>
               <tr>
                 <td>Upload Track Stems</td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
                 <td>
                     <span class="check">O</span>
                 </td>
@@ -118,23 +105,12 @@
                 <td>
                     <span class="un-check">X</span>
                 </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
+                
               </tr>
               <tr>
                 <td>Sell Custom Services</td>
                 <td>
                     <span class="un-check">X</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
                 </td>
               </tr>
               <tr>
@@ -142,35 +118,15 @@
                 <td>
                     <span class="un-check">X</span>
                 </td>
-                <td>
-                    <span class="un-check">X</span>
-                </td>
-                <td>
-                    100% of Revenue to Seller
-                </td>
               </tr>
               <tr>
                 <td>Instant Payments</td>
                 <td>
                     <span class="check">O</span>
                 </td>
-                <td>
-                    <!-- <span class="un-check">X</span> -->
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <!-- <span class="un-check">X</span> -->
-                    <span class="check">O</span>
-                </td>
               </tr>
               <tr>
                 <td>Accept PayPal payments</td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
                 <td>
                     <span class="check">O</span>
                 </td>
@@ -180,21 +136,9 @@
                 <td>
                     <span class="check">O</span>
                 </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
               </tr>
               <tr>
                 <td>Sell On BeatStars Marketplace</td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
                 <td>
                     <span class="check">O</span>
                 </td>
@@ -204,41 +148,23 @@
                 <td>
                     30%
                 </td>
-                <td>
-                    0%
-                </td>
-                <td>
-                    0%
-                </td>
               </tr>
               <tr>
                 <td>Embeddable Blaze Player</td>
                 <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
               </tr>
               <tr>
                 <td>Monthly Private Messages</td>
                 <td>5</td>
-                <td>20</td>
-                <td>Unlimited</td>
               </tr>
               <tr>
                 <td>Number of License Agreements for Sale</td>
                 <td>2</td>
-                <td>4</td>
-                <td>Unlimited</td>
               </tr>
               <tr>
                 <td>Premium Statistics</td>
                 <td>
                     <span class="un-check">X</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
                 </td>
               </tr>
               <tr>
@@ -246,33 +172,15 @@
                 <td>
                     <span class="un-check">X</span>
                 </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
               </tr>
               <tr>
                 <td>Submissions per Opportunity</td>
                 <td>
                     <span class="un-check">X</span>
                 </td>
-                <td>
-                   1
-                </td>
-                <td>
-                   2
-                </td>
               </tr>
               <tr>
                 <td>Widgets</td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
                 <td>
                     <span class="check">O</span>
                 </td>
@@ -282,35 +190,16 @@
                 <td>
                     <span class="un-check">X</span>
                 </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
               </tr>
               <tr>
                 <td>Audiomack Monetization</td>
                 <td>
                     <span class="check">O</span>
                 </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
-                <td>
-                    <span class="check">O</span>
-                </td>
               </tr>
               <tfoot>
                   <tr>
-                      <td></td>
-                      <td>
-                        <a href="" class="btn btn--start">Get Started</a>
-                      </td>
-                      <td>
-                        <a href="" class="btn btn--start">Get Started</a>
-                      </td>
-                      <td>
+                      <td colspan="2">
                         <a href="" class="btn btn--start">Get Started</a>
                       </td>
                   </tr>
@@ -318,6 +207,279 @@
             </tbody>
           </table>
         </div>
+
+        <div class="accounts__plan-case" id="plan-marketplace" style="display: none;">
+          <div class="accounts__plan-header">
+            <div class="left">
+              <p>
+                MARKETPLACE
+              </p>
+              <h2><span>$</span> 0.00<em>/mo</em></h2>
+            </div>
+            <div class="right">
+              <a href="" class="btn btn--start">Get Started</a>
+            </div>
+          </div>
+          <table>
+            <colgroup>
+              <col width="" />
+              <col width="120" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>Upload Tracks Limit</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Upload Track Stems</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sell Sound Kits</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                
+              </tr>
+              <tr>
+                <td>Sell Custom Services</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Pro Page Sales Revenue</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Instant Payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Accept PayPal payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Accept Stripe payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sell On BeatStars Marketplace</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>BeatStars Marketplace Commission</td>
+                <td>
+                    30%
+                </td>
+              </tr>
+              <tr>
+                <td>Embeddable Blaze Player</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Monthly Private Messages</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Number of License Agreements for Sale</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Premium Statistics</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sales Statistics</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Submissions per Opportunity</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Widgets</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>SoundCloud Monetization</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Audiomack Monetization</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tfoot>
+                  <tr>
+                      <td colspan="2">
+                        <a href="" class="btn btn--start">Get Started</a>
+                      </td>
+                  </tr>
+              </tfoot>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="accounts__plan-case" id="plan-pro" style="display: none;">
+          <div class="accounts__plan-header">
+            <div class="left">
+              <p>
+                PRO PAGE
+              </p>
+              <h2><span>$</span> 0.00<em>/mo</em></h2>
+            </div>
+            <div class="right">
+              <a href="" class="btn btn--start">Get Started</a>
+            </div>
+          </div>
+          <table>
+            <colgroup>
+              <col width="" />
+              <col width="120" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>Upload Tracks Limit</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Upload Track Stems</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sell Sound Kits</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                
+              </tr>
+              <tr>
+                <td>Sell Custom Services</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Pro Page Sales Revenue</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Instant Payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Accept PayPal payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Accept Stripe payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sell On BeatStars Marketplace</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>BeatStars Marketplace Commission</td>
+                <td>
+                    30%
+                </td>
+              </tr>
+              <tr>
+                <td>Embeddable Blaze Player</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Monthly Private Messages</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Number of License Agreements for Sale</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Premium Statistics</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sales Statistics</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Submissions per Opportunity</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Widgets</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>SoundCloud Monetization</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Audiomack Monetization</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tfoot>
+                  <tr>
+                      <td colspan="2">
+                        <a href="" class="btn btn--start">Get Started</a>
+                      </td>
+                  </tr>
+              </tfoot>
+            </tbody>
+          </table>
+        </div>
+
       </div>
       @@include('./include/footer.html')
     </div>
@@ -342,6 +504,14 @@
           bg.classList.add("right");
         }
       });
+
+      $('.accounts__tab button').on('click', function(){
+        $('.accounts__tab button').removeClass('active');
+        $(this).addClass('active')
+        $('.accounts__plan-case').hide();
+        var target = $(this).data('target');
+        $('#'+target).show();
+      })
     </script>
   </body>
 </html>

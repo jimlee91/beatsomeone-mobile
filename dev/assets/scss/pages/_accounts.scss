@@ -4,10 +4,11 @@
     background-size: 100% auto;
 
     .accounts__result-title {
-      font-size: 32px;
+      font-size: 18px;
+      line-height: 24px;
       text-align: center;
       font-weight: 600;
-      margin-bottom: 200px;
+      margin-bottom: 60px;
     }
   }
   &.accounts--start {
@@ -23,7 +24,7 @@
     max-width: 500px;
   }
   .accounts__title {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     text-align: center;
     padding: 0 20px;
     h1 {
@@ -42,22 +43,33 @@
     width: 100%;
   }
 
+  .accounts__tab {
+    margin-top: 25px;
+    text-align: center;
+  }
+
   .accounts__plan-case {
-    width: 900px;
+    width: 100%;
+    max-width: 450px;
     margin: 0 auto;
-    margin-top: 65px;
+    margin-top: 30px;
+    padding: 0 20px;
+    table {
+      border-top: 2px solid #808080;
+    }
     th,
     td {
       border-right: 1px solid #1a1a1a;
       text-align: center;
+      font-size: 12px;
       &:last-child {
         border-right: 0;
       }
     }
     td {
       border-bottom: 1px solid #1a1a1a;
-      height: 60px;
-      font-size: 14px;
+      height: 40px;
+      font-size: 12px;
       &:first-child {
         text-align: left;
         padding: 0 15px;
@@ -76,10 +88,11 @@
         }
       }
     }
-    th {
-      border-bottom: 2px solid #808080;
-      padding: 20px;
 
+    .accounts__plan-header {
+      border-bottom: 2px solid #808080;
+      @include flex($justify: space-between, $align: flex-start);
+      padding-bottom: 20px;
       p {
         color: #fff;
         font-size: 16px;
@@ -91,13 +104,13 @@
         }
       }
       h2 {
-        margin: 15px 0;
-        font-size: 30px;
+        margin-top: 10px;
+        font-size: 22px;
         color: #ffda2a;
         font-weight: 600;
         line-height: 1em;
         span {
-          font-size: 24px;
+          font-size: 18px;
         }
         em {
           font-size: 12px;
@@ -109,33 +122,40 @@
       border-bottom: none;
     }
     tfoot td {
-      padding: 20px 0;
-      border-top: 1px solid #808080;
+      padding: 20px 0 !important;
+      border-top: 1px solid #1a1a1a;
+
+      a {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
   .accounts__case {
     @include flex($justify: space-between);
-    margin-bottom: 60px;
+    max-width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 
     .case {
       flex: 1;
-      margin: 0 10px;
-      width: 210px;
-      cursor: pointer;
+      &:first-child {
+        margin-right: 10px;
+      }
 
       &.case--listen {
         div {
           .icon {
             background: url("../images/icon/account-listen.png") no-repeat
               center;
-            background-size: auto 60px;
+            background-size: auto 50px;
           }
         }
         input:checked + div {
           .icon {
             background: url("../images/icon/account-listen-active.png")
               no-repeat center;
-            background-size: auto 60px;
+            background-size: auto 50px;
           }
         }
       }
@@ -144,21 +164,21 @@
           .icon {
             background: url("../images/icon/account-monetize.png") no-repeat
               center;
-            background-size: auto 60px;
+            background-size: auto 50px;
           }
         }
         input:checked + div {
           .icon {
             background: url("../images/icon/account-monetize-active.png")
               no-repeat center;
-            background-size: auto 60px;
+            background-size: auto 50px;
           }
         }
       }
     }
 
     div {
-      height: 210px;
+      padding: 20px 0;
       width: 100%;
       border: 3px solid #2b2c30;
       border-radius: 15px;
@@ -168,13 +188,13 @@
       text-align: center;
       span {
         width: 100%;
-        height: 60px;
-        margin-bottom: 20px;
+        height: 50px;
+        margin-bottom: 10px;
       }
       p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 18px;
-        line-height: 24px;
+        line-height: 20px;
         font-weight: 600;
         color: #9fa1a9;
       }
@@ -279,7 +299,16 @@
     padding-top: 30px;
     border-top: 1px solid #3c3d3d;
     padding-bottom: 20px;
-
+    padding-left: 25px;
+    position: relative;
+    p {
+      line-height: 20px;
+    }
+    span {
+      position: absolute;
+      left: 0;
+      top: 32px;
+    }
     a {
       color: #279198;
       border-bottom: 1px solid #279198;
@@ -293,12 +322,14 @@
     background: #232325;
     border-radius: 30px;
     position: relative;
+    max-width: 360px;
+    margin: 0 auto;
     .accounts__switch-bg {
       position: absolute;
       display: block;
-      width: 225px;
-      height: 50px;
-      line-height: 50px;
+      width: 175px;
+      height: 45px;
+      line-height: 45px;
       background: #ffda2a;
       border-radius: 25px;
       left: 5px;
@@ -306,7 +337,7 @@
       z-index: 1;
       transition: all 0.5s;
       &.right {
-        left: 230px;
+        left: 180px;
       }
     }
     @include flex;
@@ -314,7 +345,7 @@
       position: relative;
       z-index: 2;
       flex: 1;
-      height: 50px;
+      height: 45px;
       width: 50%;
       text-align: center;
       cursor: pointer;
@@ -328,6 +359,7 @@
         color: #7f7f7f;
         font-weight: 600;
         transition: all 0.5s;
+        font-size: 14px;
         em {
           display: block;
           font-size: 14px;
@@ -347,7 +379,7 @@
 
   .accounts__plan-price {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     h2 {
       span {
         font-size: 34px;
