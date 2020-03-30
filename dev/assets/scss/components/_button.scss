@@ -3,3 +3,38 @@
   color: $color-white;
   @include borderLikeButton($padding: 10px 25px);
 }
+
+.btn {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 3px;
+  font-weight: 600;
+  &.btn--submit {
+    background: #ffda2a;
+    color: #000;
+  }
+
+  &.btn--white {
+    color: #000;
+    background: #fff;
+    img {
+      vertical-align: middle;
+    }
+  }
+  &.btn--gray {
+    background: #868686;
+    color: #fff;
+  }
+
+  &.btn--start {
+    width: auto;
+    background: #1c66ba;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    width: 100px;
+    display: inline-block;
+    font-size: 12px;
+  }
+}

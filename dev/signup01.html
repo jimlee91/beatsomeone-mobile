@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta property="og:image" content="이미지" />
+    <meta property="og:url" content="유알엘" />
+    <meta property="og:description" content="디스크립션" />
+    <meta property="og:title" content="타이틀" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/plugins/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>beatsomeone</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('include/header.html')
+      <div class="container accounts accounts--start">
+        <div class="accounts__title">
+          <h1>Do you create beats?<br />Then join us!</h1>
+        </div>
+
+        <div class="login accounts__defaultLayout">
+          <form action="">
+            <div class="accounts__case">
+              <label for="listen " class="case case--listen">
+                <input type="radio" name="case" id="listen " hidden checked />
+                <div>
+                  <span class="icon"></span>
+                  <p>I want to listen<br />& buy music</p>
+                </div>
+              </label>
+
+              <label for="monetize" class="case case--monetize">
+                <input type="radio" name="case" id="monetize" hidden />
+                <div>
+                  <span class="icon"></span>
+                  <p>I want to monetize<br />my music</p>
+                </div>
+              </label>
+            </div>
+
+            <div class="accounts__switch">
+              <span class="accounts__switch-bg"></span>
+              <label for="monthly">
+                <input type="radio" id="monthly" hidden name="bill" checked />
+                <span>Bill monthly</span>
+              </label>
+              <label for="yearly">
+                <input type="radio" id="yearly" hidden name="bill" />
+                <span>
+                  Bill yearly
+                  <em>Save 20% or more</em>
+                </span>
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="accounts__plan-case">
+          <table>
+            <colgroup>
+              <col width="300" />
+              <col width="200" />
+              <col width="200" />
+              <col width="200" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <p>
+                    <br />
+                    FREE
+                  </p>
+                  <h2><span>$</span>0.00</h2>
+                  <a href="" class="btn btn--start">Get Started</a>
+                </th>
+                <th>
+                  <p>
+                    MARKETPLACE<br />
+                    PLAN
+                  </p>
+                  <h2><span>$</span>0.00<em>/mo</em></h2>
+                  <a href="" class="btn btn--start">Get Started</a>
+                </th>
+                <th>
+                  <p>PRO PAGE PLAN<br /><span>(Unlimited)</span></p>
+                  <h2><span>$</span>0.00<em>/mo</em></h2>
+                  <a href="" class="btn btn--start">Get Started</a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Upload Tracks Limit</td>
+                <td>10</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Upload Track Stems</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sell Sound Kits</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sell Custom Services</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Pro Page Sales Revenue</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                    100% of Revenue to Seller
+                </td>
+              </tr>
+              <tr>
+                <td>Instant Payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <!-- <span class="un-check">X</span> -->
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <!-- <span class="un-check">X</span> -->
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Accept PayPal payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Accept Stripe payments</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sell On BeatStars Marketplace</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>BeatStars Marketplace Commission</td>
+                <td>
+                    30%
+                </td>
+                <td>
+                    0%
+                </td>
+                <td>
+                    0%
+                </td>
+              </tr>
+              <tr>
+                <td>Embeddable Blaze Player</td>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Monthly Private Messages</td>
+                <td>5</td>
+                <td>20</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Number of License Agreements for Sale</td>
+                <td>2</td>
+                <td>4</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Premium Statistics</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sales Statistics</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Submissions per Opportunity</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                   1
+                </td>
+                <td>
+                   2
+                </td>
+              </tr>
+              <tr>
+                <td>Widgets</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>SoundCloud Monetization</td>
+                <td>
+                    <span class="un-check">X</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Audiomack Monetization</td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+                <td>
+                    <span class="check">O</span>
+                </td>
+              </tr>
+              <tfoot>
+                  <tr>
+                      <td></td>
+                      <td>
+                        <a href="" class="btn btn--start">Get Started</a>
+                      </td>
+                      <td>
+                        <a href="" class="btn btn--start">Get Started</a>
+                      </td>
+                      <td>
+                        <a href="" class="btn btn--start">Get Started</a>
+                      </td>
+                  </tr>
+              </tfoot>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      @@include('./include/footer.html')
+    </div>
+    <script src="./assets/plugins/jquery.js"></script>
+    <script src="./assets/plugins/underscore.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="./assets/plugins/slick/slick.js"></script>
+    <script src="./assets/plugins/rangeSlider/js/ion.rangeSlider.js"></script>
+    <script src="./assets/js/build.js"></script>
+
+    <script>
+      var bg = document.querySelector(".accounts__switch-bg");
+      // 월간
+      document.getElementById("monthly").addEventListener("change", function() {
+        if (this.checked === true) {
+          bg.classList.remove("right");
+        }
+      });
+      // 연간
+      document.getElementById("yearly").addEventListener("change", function() {
+        if (this.checked === true) {
+          bg.classList.add("right");
+        }
+      });
+    </script>
+  </body>
+</html>
