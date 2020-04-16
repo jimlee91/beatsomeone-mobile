@@ -159,6 +159,9 @@
       }
       .datepicker {
         background: url('../images/icon/calendar.png') #303136 no-repeat calc(100% - 20px) center;
+        &.active {
+          background: url('../images/icon/calendar-white.png') #303136 no-repeat calc(100% - 20px) center;
+        }
       }
       textarea {
         color:#fff;
@@ -183,6 +186,9 @@
         padding:0 20px;
         &:placeholder {
           color:rgba(255,255,255,.3);
+        }
+        &.disabled {
+          background:#242428;
         }
       }
     }

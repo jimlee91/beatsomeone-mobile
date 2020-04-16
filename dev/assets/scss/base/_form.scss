@@ -28,6 +28,7 @@ textarea {
   border-radius: 0;
   box-sizing: border-box;
   font-family: $default-font;
+  appearance: none;
 }
 
 /* Remove the stupid outer glow in Webkit */

@@ -38,7 +38,7 @@
                                 <label for="" class="form-item">
                                     <p class="form-title required">TITLE</p>
                                     <div class="input">
-                                        <input ype="text" placeholder="New TrackAS" />
+                                        <input type="text" placeholder="New TrackAS" />
                                     </div>
                                     <span class="form-info">
                                         9 out of 60 Maximum characters allowed
@@ -48,7 +48,7 @@
                                 <label for="" class="form-item">
                                     <p class="form-title">TAGS (3)</p>
                                     <div class="input">
-                                        <input ype="text" placeholder="Tags (,)Comma Separated" maxlength="25" id="tags"/>
+                                        <input type="text" placeholder="Tags (,)Comma Separated" maxlength="25" id="tags"/>
                                         <span class="form-unit"><span>0</span>/25</span>
                                     </div>
                                 </label>
@@ -154,7 +154,7 @@
                             <div class="form-item">
                                 <p class="form-title">Artwork Dimension</p>
                                 <div class="input">
-                                    <input ype="text" class="artworkDoemin" placeholder="" value="https://www.beatstars.com/beat/4377207" />
+                                    <input type="text" class="artworkDoemin" placeholder="" value="https://www.beatstars.com/beat/4377207" readonly />
                                     <button class="form-copy" type="button">Copy</button>
                                 </div>
                             </div>
@@ -187,12 +187,12 @@
                                     <div class="row row--inner">
                                         <span class="col">
                                             <div class="input">
-                                                <input ype="text" placeholder="22,000" />
+                                                <input type="number" placeholder="22,000" />
                                             </div>
                                         </span>
                                         <span class="col">
                                             <div class="input">
-                                                <input ype="text" placeholder="19.00" />
+                                                <input type="number" placeholder="19.00" />
                                             </div>
                                         </span>
                                     </div>
@@ -204,7 +204,7 @@
                                         </span>
                                         <span class="col">
                                             <div class="input">
-                                                <input ype="text" placeholder="0" />
+                                                <input type="number" placeholder="0" />
                                             </div>
                                         </span>
                                     </div>
@@ -230,12 +230,12 @@
                                     <div class="row row--inner">
                                         <span class="col">
                                             <div class="input">
-                                                <input ype="text" placeholder="22,000" />
+                                                <input type="number" placeholder="22,000" />
                                             </div>
                                         </span>
                                         <span class="col">
                                             <div class="input">
-                                                <input ype="text" placeholder="19.00" />
+                                                <input type="number" placeholder="19.00" />
                                             </div>
                                         </span>
                                     </div>
@@ -247,7 +247,7 @@
                                         </span>
                                         <span class="col">
                                             <div class="input">
-                                                <input ype="text" placeholder="1" readonly />
+                                                <input type="number" placeholder="1" readonly class="disabled" />
                                             </div>
                                         </span>
                                     </div>
@@ -306,7 +306,7 @@
                                 <label for="" class="form-item">
                                     <p class="form-title ">BPM(Beats per minute)</p>
                                     <div class="input">
-                                        <input ype="text" value="0" />
+                                        <input type="number" value="0"/>
                                     </div>
                                 </label>
                             </div>
@@ -399,10 +399,13 @@
 
 
 <script>
+
+    $('.datepicker').on('change', function(){
+        this.value && $(this).addClass('active');
+    })
     // 파일 추가 모션
     $('#tags').on('keyup', function(e){
         $(this).parents('.form-item').find('.form-unit span').text(e.target.value.length);
-
     });
     $('.addAudioFile input').on('change', function(){
         if( this.value ) {
