@@ -158,6 +158,7 @@
         font-size: 14px;
       }
       .datepicker {
+        line-height: 55px;
         background: url('../images/icon/calendar.png') #303136 no-repeat calc(100% - 20px) center;
         &.active {
           background: url('../images/icon/calendar-white.png') #303136 no-repeat calc(100% - 20px) center;
